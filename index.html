@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Mejorado: El Uso Creativo de Pañuelos en el Aula</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos personalizados y animaciones */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .page {
+            display: none; /* Oculta todas las páginas por defecto */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .page.active {
+            display: block; /* Muestra la página activa */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Estilos para las listas */
+        .content-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .content-section ul li {
+            position: relative;
+            padding-left: 1.75rem; /* Espacio para el ícono */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+        .content-section ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #22c55e; /* green-500 */
+            font-weight: bold;
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+        .links-interes ul li::before {
+            content: '🔗'; /* Icono de enlace para la sección de recursos */
+            color: #3b82f6; /* blue-500 */
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+<div class="container mx-auto max-w-4xl p-4 sm:p-6 md:p-8">
+    
+    <!-- Contenedor principal del curso -->
+    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="p-6 sm:p-10">
+            <!-- Encabezado -->
+            <header class="text-center mb-8">
+                <h1 class="text-3xl sm:text-4xl font-bold text-blue-700">El Uso Creativo de Pañuelos en el Aula</h1>
+                <p class="mt-2 text-lg text-slate-600">Música, Movimiento y Aprendizaje Integral</p>
+            </header>
+
+            <!-- Barra de Progreso -->
+            <div class="mb-8">
+                <div class="w-full bg-slate-200 rounded-full h-4">
+                    <div id="progressBar" class="bg-gradient-to-r from-green-400 to-blue-500 h-4 rounded-full text-xs font-medium text-white text-center leading-none transition-all duration-500" style="width: 0%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p id="progressText" class="text-center text-sm text-slate-500 mt-2">Módulo 1 de 8</p>
+            </div>
+
+            <main id="course-content" class="content-section">
+                <!-- Las páginas del curso se insertarán aquí por JS -->
+                <!-- Página 0: Introducción -->
+                <section class="page active" id="page-0">
+                    <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Bienvenida al Curso</h2>
+                    <p class="mb-4"><strong>Dirigido a:</strong> Maestros, cuidadores, padres y profesionales de la educación infantil, incluyendo aquellos que trabajan con bebés, niños pequeños y preescolares.</p>
+                    <p><strong>Descripción del Curso:</strong> Este curso explora la multifacética utilidad de los pañuelos de movimiento como herramienta pedagógica en el aula y en casa. Aprenderá cómo los pañuelos pueden transformar las actividades diarias en experiencias de aprendizaje significativas, apoyando el desarrollo físico, cognitivo, social-emocional y lingüístico de los niños, todo ello a través del juego, la música y el movimiento creativo.</p>
+                </section>
+
+                <!-- Página 1: Módulo 1 -->
+                <section class="page" id="page-1">
+                    <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Módulo 1: El Poder del Pañuelo</h2>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-4 mb-3">¿Por qué usar pañuelos? Beneficios clave:</h3>
+                    <ul>
+                        <li>Apoyan una amplia gama de habilidades, conceptos, exploración, imaginación y creatividad.</li>
+                        <li>Son prácticos y seguros, especialmente para los más pequeños, por ser transparentes y lavables.</li>
+                        <li>Su material ligero y colorido es agradable de trabajar y fomenta la motricidad.</li>
+                        <li>Son un gran éxito con niños de diversas edades, incluso mayores.</li>
+                        <li>Fomentan la conciencia corporal y la motricidad gruesa a través del movimiento creativo.</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-6 mb-3">Materiales recomendados:</h3>
+                    <ul>
+                        <li>Pañuelos de movimiento dedicados (ej. Bear Paw Creek).</li>
+                        <li>Alternativas: Camisas viejas o telas largas que los niños puedan agitar.</li>
+                        <li>Complementos: Instrumentos caseros con materiales reciclados.</li>
+                    </ul>
+                </section>
+                
+                <!-- Página 2: Módulo 2 -->
+                <section class="page" id="page-2">
+                    <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Módulo 2: Desarrollo Físico y Motor</h2>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-4 mb-3">Desarrollo de la Motricidad Gruesa:</h3>
+                    <ul>
+                        <li>Fomente el baile libre con música de diferentes tempos.</li>
+                        <li>Realice acciones como ondear, sacudir, saltar, lanzar y atrapar el pañuelo.</li>
+                        <li>Ayude a sentir el pulso musical (steady beat) con el movimiento.</li>
+                        <li>Anime diversos tipos de movimiento (bailar, aplaudir, etc.).</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-6 mb-3">Conciencia Corporal y Espacial:</h3>
+                    <ul>
+                        <li>Mueva el pañuelo alrededor de partes del cuerpo (hombros, cabeza, rodillas).</li>
+                        <li>Utilice el pañuelo para delimitar el espacio personal del niño.</li>
+                        <li>Incorpore movimientos que impliquen razonamiento espacial (arriba/abajo, lado a lado).</li>
+                    </ul>
+                </section>
+
+                <!-- Página 3: Módulo 3 -->
+                <section class="page" id="page-3">
+                    <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Módulo 3: Música y Cognición</h2>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-4 mb-3">Beneficios Cognitivos:</h3>
+                     <ul>
+                        <li>La música fortalece las vías neurales y la exploración del lenguaje.</li>
+                        <li>Impulsa el desarrollo cognitivo y social de los niños.</li>
+                        <li>El ritmo crea una conexión entre música, matemáticas y cultura.</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-6 mb-3">Integración de Matemáticas:</h3>
+                    <ul>
+                        <li>Relacione tempo, cadencia y melodía con patrones, conteo y razonamiento espacial.</li>
+                        <li>Use canciones con conteo y patrones (A-B, 1-2-3).</li>
+                        <li>La música es una de las primeras formas en que los niños se exponen a las matemáticas.</li>
+                    </ul>
+                </section>
+
+                <!-- Página 4: Módulo 4 -->
+                <section class="page" id="page-4">
+                    <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Módulo 4: Canciones y Actividades Prácticas</h2>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-4 mb-3">Repertorio de Canciones:</h3>
+                    <ul>
+                        <li>Explore canciones como "Blowing In The Wind", "Moving With A Scarf", "A Little Seed", etc.</li>
+                        <li>Utilice canciones bilingües y adapte clásicos infantiles ("Twinkle Twinkle Little Star").</li>
+                        <li>Incorpore canciones con acciones repetitivas ("Arriba y abajo", "Sacude, sacude").</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-6 mb-3">Actividades de Juego:</h3>
+                    <ul>
+                        <li>Implemente bailes con música rápida y lenta.</li>
+                        <li>Juegue a adivinar colores o a describir texturas.</li>
+                        <li>Fomente el juego imaginativo: el pañuelo como capa, velo, fantasma, etc.</li>
+                        <li>Use los pañuelos para enseñar dinámicas musicales (fuerte/suave).</li>
+                    </ul>
+                </section>
+                
+                <!-- Página 5: Módulo 5 -->
+                <section class="page" id="page-5">
+                    <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Módulo 5: Estrategias Pedagógicas</h2>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-4 mb-3">Intencionalidad y Adaptaciones:</h3>
+                    <ul>
+                        <li>Anime a los niños a escuchar la música y modele cómo seguir el ritmo.</li>
+                        <li>Permita que los niños decidan cuándo participar, observando su lenguaje corporal.</li>
+                        <li>Fomente diferentes tipos de movimiento para la inclusión de todos.</li>
+                        <li>Asegúrese de que el vocabulario y los patrones sean apropiados para su desarrollo.</li>
+                        <li>Pregunte a las familias sobre su cultura para incorporarla al programa.</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-6 mb-3">Gestión del Aula:</h3>
+                    <ul>
+                        <li>Establezca límites claros para el espacio personal.</li>
+                        <li>Use los pañuelos para enseñar a no hablar durante la música.</li>
+                        <li>Practique una recogida estructurada del material.</li>
+                    </ul>
+                </section>
+                
+                <!-- Página 6: Módulo 6 -->
+                 <section class="page" id="page-6">
+                    <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Módulo 6: Integración Curricular</h2>
+                    <h3 class="text-xl font-semibold text-blue-700 mt-4 mb-3">Incorporación en Rutinas Diarias:</h3>
+                    <ul>
+                        <li>Integre la música y las matemáticas en las transiciones (cantar una canción para dar instrucciones).</li>
+                        <li>Conecte las actividades con marcos de aprendizaje temprano como ELOF.</li>
+                    </ul>
+                     <h3 class="text-xl font-semibold text-blue-700 mt-6 mb-3">Actividades de Calma y Transición:</h3>
+                    <ul>
+                        <li>Use movimientos suaves y música relajante para ayudar a los niños a calmarse.</li>
+                        <li>Esta técnica es una poderosa herramienta para la gestión del aula.</li>
+                    </ul>
+                </section>
+
+                <!-- Página 7: Conclusión -->
+                <section class="page" id="page-7">
+                    <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Conclusión y Recursos</h2>
+                    <p class="mb-6">Los pañuelos de movimiento son una herramienta sencilla pero potente para fomentar el aprendizaje integral en la primera infancia. Ahora tienes un repertorio de ideas para enriquecer la experiencia de tus niños, promoviendo un ambiente de alegría, conexión y descubrimiento.</p>
+                    
+                    <div class="links-interes mt-8 p-6 bg-slate-50 border border-slate-200 rounded-lg">
+                        <h3 class="text-lg font-semibold text-slate-800 mb-3">Enlaces de Interés y Recursos Adicionales:</h3>
+                        <ul class="space-y-3">
+                            <li><a href="https://www.bearpawcreek.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Bear Paw Creek</a></li>
+                            <li><a href="https://www.naeyc.org/resources/topics/music" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">NAEYC - Música en la Educación Infantil</a></li>
+                            <li><a href="https://headstart.gov/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Head Start</a></li>
+                            <li><a href="https://www.youtube.com/channel/UCNRD6I1Kzuw63yL35nAbWRQ" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Canticuénticos</a></li>
+                            <li><a href="https://www.youtube.com/@Learningstationmusic" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">The Learning Station</a></li>
+                            <li><a href="https://www.youtube.com/results?search_query=canciones+infantiles+con+pañuelos" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">YouTube: Búsqueda de canciones con pañuelos</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+        <!-- Navegación y Footer -->
+        <footer class="bg-slate-50 border-t border-slate-200 p-6">
+            <!-- [CAMBIO] Contenedor de navegación adaptable -->
+            <div id="navigation" class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <!-- [CAMBIO] Botones con ancho adaptable -->
+                <button id="prevBtn" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-700 font-semibold py-2 px-4 rounded-lg shadow-sm hover:bg-slate-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                    Anterior
+                </button>
+                <button id="nextBtn" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                    Siguiente
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                </button>
+            </div>
+            
+            <div id="courseFooter" class="text-center mt-8 pt-6 border-t border-slate-200" style="display:none;">
+                <p class="text-xl font-bold text-green-600">¡Felicidades por completar el curso!</p>
+                <p class="text-slate-500 mt-2">Este es un curso de autoformación para profesores de música.</p>
+                <p class="text-sm text-slate-500 mt-4">Brotes Musicales® Un proyecto de Manuel Puebla Vega</p>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- ESTADO Y ELEMENTOS DEL DOM ---
+        let currentPageIndex = 0;
+        const pages = document.querySelectorAll('.page');
+        const totalPages = pages.length;
+
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const courseFooter = document.getElementById('courseFooter');
+        const navigationControls = document.getElementById('navigation');
+
+        // --- FUNCIONES ---
+
+        /**
+         * Muestra una página específica basada en su índice y actualiza la interfaz.
+         * @param {number} index - El índice de la página a mostrar.
+         */
+        function showPage(index) {
+            // Oculta todas las páginas y luego muestra la activa
+            pages.forEach((page, i) => {
+                page.classList.toggle('active', i === index);
+            });
+
+            updateUI(index);
+        }
+
+        /**
+         * Actualiza todos los componentes de la interfaz de usuario (progreso, botones, etc.).
+         * @param {number} index - El índice de la página actual.
+         */
+        function updateUI(index) {
+            // Actualizar barra y texto de progreso
+            // Se calcula el progreso basado en los módulos completados (páginas vistas).
+            const progressPercentage = Math.round(((index + 1) / totalPages) * 100);
+            progressBar.style.width = progressPercentage + '%';
+            progressBar.setAttribute('aria-valuenow', progressPercentage);
+            progressText.textContent = `Módulo ${index + 1} de ${totalPages}`;
+
+            // Habilitar/deshabilitar botones de navegación
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === totalPages - 1;
+
+            // Mostrar/ocultar el pie de página final
+            const isLastPage = index === totalPages - 1;
+            courseFooter.style.display = isLastPage ? 'block' : 'none';
+            // Oculta los botones de navegación en la última página para una conclusión más limpia
+            if (isLastPage) {
+                 navigationControls.style.display = 'none';
+            } else {
+                 navigationControls.style.display = 'flex';
+            }
+        }
+
+        /**
+         * Navega a la página siguiente o anterior.
+         * @param {number} direction - La dirección de la navegación (-1 para anterior, 1 para siguiente).
+         */
+        function navigatePage(direction) {
+            // Calcula el nuevo índice, asegurándose de que esté dentro de los límites
+            const newIndex = currentPageIndex + direction;
+            if (newIndex >= 0 && newIndex < totalPages) {
+                currentPageIndex = newIndex;
+                showPage(currentPageIndex);
+            }
+        }
+
+        // --- INICIALIZACIÓN ---
+
+        // Asignar eventos a los botones
+        prevBtn.addEventListener('click', () => navigatePage(-1));
+        nextBtn.addEventListener('click', () => navigatePage(1));
+
+        // Mostrar la primera página al cargar
+        showPage(currentPageIndex);
+    });
+</script>
+
+</body>
+</html>
